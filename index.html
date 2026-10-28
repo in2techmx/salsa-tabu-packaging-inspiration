@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salsa Tabú — Catálogo de Inspiración de Packaging (60 Diseños)</title>
+  <title>Salsa Tabú — Catálogo de Packaging & Spots en Comida (60 Diseños + 5 Videos)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -114,7 +114,7 @@
 
     .hero p {
       color: var(--text-muted);
-      max-width: 800px;
+      max-width: 820px;
       margin: 0 auto 32px;
       font-size: 1.05rem;
     }
@@ -163,7 +163,7 @@
     /* Metrics Strip */
     .metrics-strip {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 16px;
       margin: 30px 0 50px;
       padding: 24px;
@@ -248,6 +248,17 @@
       box-shadow: 0 2px 12px rgba(212, 175, 55, 0.3);
     }
 
+    .tab-btn.btn-spots-tab {
+      border-color: rgba(225, 29, 72, 0.4);
+      color: #fda4af;
+    }
+    .tab-btn.btn-spots-tab.active {
+      background: var(--ruby);
+      color: #fff;
+      border-color: var(--ruby);
+      box-shadow: 0 2px 14px rgba(225, 29, 72, 0.4);
+    }
+
     .search-box {
       position: relative;
       min-width: 260px;
@@ -315,7 +326,7 @@
       overflow: hidden;
     }
 
-    .card-img {
+    .card-media {
       position: absolute;
       top: 0;
       left: 0;
@@ -325,7 +336,7 @@
       transition: transform 0.5s ease;
     }
 
-    .card:hover .card-img {
+    .card:hover .card-media {
       transform: scale(1.04);
     }
 
@@ -343,6 +354,13 @@
       padding: 4px 10px;
       border-radius: 6px;
       text-transform: uppercase;
+      z-index: 5;
+    }
+
+    .card-badge.video-badge {
+      background: rgba(225, 29, 72, 0.9);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.4);
     }
 
     .card-cat-pill {
@@ -358,6 +376,7 @@
       letter-spacing: 0.06em;
       padding: 4px 10px;
       border-radius: 6px;
+      z-index: 5;
     }
 
     .card-body {
@@ -423,7 +442,7 @@
       background: var(--bg-card);
       border: 1px solid var(--border-bright);
       border-radius: 16px;
-      max-width: 950px;
+      max-width: 980px;
       width: 100%;
       max-height: 90vh;
       display: grid;
@@ -435,7 +454,7 @@
 
     @media (min-width: 800px) {
       .modal-box {
-        grid-template-columns: 1.1fr 1fr;
+        grid-template-columns: 1.15fr 1fr;
       }
     }
 
@@ -444,19 +463,20 @@
       to { transform: scale(1); opacity: 1; }
     }
 
-    .modal-img-wrap {
+    .modal-media-wrap {
       background: #000;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
+      overflow: hidden;
     }
 
-    .modal-img {
+    .modal-media {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      max-height: 550px;
+      max-height: 560px;
     }
 
     .modal-details {
@@ -594,17 +614,17 @@
 <body>
 
   <div class="framework-badge">
-    Framework IN2TECHMX Activado • Director de Desarrollo (DD) • Catálogo Oficial de Packaging y Diseño
+    Framework IN2TECHMX Activado • Director de Desarrollo (DD) • Catálogo Oficial de Packaging y Spots de Comida Mexicana
   </div>
 
   <header class="container">
     <div class="hero">
       <div class="hero-eyebrow">
-        <span>🏺</span> Colección de Inspiración de Empaques 2026
+        <span>🏺</span> Colección de Packaging & Spots Comerciales 2026
       </div>
-      <h1>Salsa Tabú — Packaging Inspiration</h1>
+      <h1>Salsa Tabú — Packaging & Mini Spots</h1>
       <p>
-        Repositorio de 60 conceptos visuales y especificaciones técnicas de empaque organizados en 6 carpetas temáticas para la línea gourmet, formatos portátiles On-The-Go, sachet de conveniencia OXXO ($10 MXN) y sistema de identidad peninsular.
+        Repositorio de 60 conceptos visuales de empaque y 5 mini anuncios comerciales en MP4 con tomas profesionales de cómo se sirve Salsa Tabú en la comida mexicana tradicional (taco gourmet, quesadilla oaxaca, torta mexicana, pastor y taquería callejera).
       </p>
       <div class="hero-actions">
         <a href="https://in2techmx.github.io/salsa-tabu-gourmet/" target="_blank" class="btn btn-gold">
@@ -621,6 +641,10 @@
       <div class="metric-item">
         <div class="metric-value">60</div>
         <div class="metric-label">Diseños de Inspiración</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-value">5</div>
+        <div class="metric-label">Spots Comerciales MP4</div>
       </div>
       <div class="metric-item">
         <div class="metric-value">6</div>
@@ -643,7 +667,8 @@
     <!-- Controls -->
     <div class="controls-wrapper">
       <div class="tabs" id="tabs">
-        <button class="tab-btn active" data-filter="all">Todos (60)</button>
+        <button class="tab-btn active" data-filter="all">Todos (65)</button>
+        <button class="tab-btn btn-spots-tab" data-filter="video-spots">🎬 Spots en Comida (5)</button>
         <button class="tab-btn" data-filter="01-frascos-gourmet-clasica">Clásica 130g (10)</button>
         <button class="tab-btn" data-filter="02-frascos-gourmet-rubi">Rubí Jamaica (10)</button>
         <button class="tab-btn" data-filter="03-pouches-squeeze-50g">Pouches 50g (10)</button>
@@ -653,7 +678,7 @@
       </div>
       <div class="search-box">
         <span class="search-icon">🔍</span>
-        <input type="text" id="searchInput" class="search-input" placeholder="Buscar por acabado, material, tipo...">
+        <input type="text" id="searchInput" class="search-input" placeholder="Buscar por acabado, taco, video, material...">
       </div>
     </div>
   </header>
@@ -668,8 +693,8 @@
   <div class="modal-backdrop" id="modalBackdrop">
     <div class="modal-box">
       <button class="modal-close" id="modalClose">✕</button>
-      <div class="modal-img-wrap">
-        <img src="" alt="" class="modal-img" id="modalImg">
+      <div class="modal-media-wrap" id="modalMediaContainer">
+        <!-- Rendered dynamically (img or video) -->
       </div>
       <div class="modal-details">
         <span class="modal-tag" id="modalCatTag">Categoría</span>
@@ -680,7 +705,8 @@
           <div class="modal-spec-text" id="modalSpec">Detalles técnicos del acabado y sustrato.</div>
         </div>
         <div class="modal-actions">
-          <a href="#" target="_blank" class="btn btn-outline" id="modalRawBtn">Descargar Arte HD</a>
+          <a href="#" target="_blank" class="btn btn-outline" id="modalRawBtn">Descargar Archivo HD</a>
+          <a href="https://in2techmx.github.io/salsa-tabu-gourmet/" target="_blank" class="btn btn-gold">🛒 Comprar en Tienda</a>
         </div>
       </div>
     </div>
@@ -695,13 +721,13 @@
           <p>📍 CDMX & Península de Yucatán, México</p>
         </div>
         <div class="footer-col">
-          <h4>Carpetas del Repositorio</h4>
-          <a href="01-frascos-gourmet-clasica/">📁 01 - Frascos Gourmet Clásica (130g)</a>
-          <a href="02-frascos-gourmet-rubi/">📁 02 - Frascos Gourmet Rubí Jamaica (130g)</a>
-          <a href="03-pouches-squeeze-50g/">📁 03 - Pouches Squeeze Portátiles (50g)</a>
-          <a href="04-pasta-brava-70g/">📁 04 - Pasta Brava Habanero & Ajo (70g)</a>
-          <a href="05-pocket-sachets-10pesos/">📁 05 - Pocket Sachets $10 MXN (15g)</a>
-          <a href="06-logotipos-e-identidad/">📁 06 - Logotipos e Identidad Visual</a>
+          <h4>Carpetas con Videos y Diseños</h4>
+          <a href="01-frascos-gourmet-clasica/">📁 01 - Frascos Gourmet Clásica (10 Diseños + Video)</a>
+          <a href="02-frascos-gourmet-rubi/">📁 02 - Frascos Gourmet Rubí (10 Diseños + Video)</a>
+          <a href="03-pouches-squeeze-50g/">📁 03 - Pouches Squeeze Portátiles (10 Diseños + Video)</a>
+          <a href="04-pasta-brava-70g/">📁 04 - Pasta Brava Habanero & Ajo (10 Diseños + Video)</a>
+          <a href="05-pocket-sachets-10pesos/">📁 05 - Pocket Sachets $10 MXN (10 Diseños + Video)</a>
+          <a href="06-logotipos-e-identidad/">📁 06 - Logotipos e Identidad Visual (10 Diseños)</a>
         </div>
         <div class="footer-col">
           <h4>Gobernanza & Auditoría</h4>
@@ -714,7 +740,7 @@
       </div>
       <div class="footer-bottom">
         <div>© 2026 Salsa Tabú México. Desarrollado bajo la gobernanza del ecosistema IN2TECHMX.</div>
-        <div>Director de Desarrollo (DD) • Repositorio Oficial de Packaging</div>
+        <div>Director de Desarrollo (DD) • Repositorio Oficial de Packaging & Spots</div>
       </div>
     </div>
   </footer>
@@ -731,6 +757,8 @@
     "specDetail": "Vidrio flint pesado 130g, tapa metálica twist-off negra mate con compuesto plastisol para pasteurización a baño maría.",
     "color": "#d4af37",
     "relPath": "01-frascos-gourmet-clasica/diseno-01-01-frascos-gourmet-clasica.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 1
   },
   {
@@ -743,6 +771,8 @@
     "specDetail": "Formato facetado 6 caras de 130ml, tapa rosca de aluminio anodizado oro y sello termocogible de garantía.",
     "color": "#d4af37",
     "relPath": "01-frascos-gourmet-clasica/diseno-02-01-frascos-gourmet-clasica.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 2
   },
   {
@@ -755,6 +785,8 @@
     "specDetail": "Sustrato polipropileno mate con ventana transparente calibrada a 40mm para visibilidad de sedimentos gourmet.",
     "color": "#d4af37",
     "relPath": "01-frascos-gourmet-clasica/diseno-03-01-frascos-gourmet-clasica.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 3
   },
   {
@@ -767,6 +799,8 @@
     "specDetail": "Vidrio óptico extra-flint tipo perfumería francesa, impresión directa UV curable oro pálido.",
     "color": "#d4af37",
     "relPath": "01-frascos-gourmet-clasica/diseno-04-01-frascos-gourmet-clasica.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 4
   },
   {
@@ -779,6 +813,8 @@
     "specDetail": "Horneado a 580°C con tintas cerámicas de metales preciosos (oro 18k líquido vitrificado).",
     "color": "#d4af37",
     "relPath": "01-frascos-gourmet-clasica/diseno-05-01-frascos-gourmet-clasica.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 5
   },
   {
@@ -791,6 +827,8 @@
     "specDetail": "Cinta de papel kraft autoadhesivo de seguridad destructible al primer giro de la tapa.",
     "color": "#d4af37",
     "relPath": "01-frascos-gourmet-clasica/diseno-06-01-frascos-gourmet-clasica.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 6
   },
   {
@@ -803,6 +841,8 @@
     "specDetail": "Doble pasada de tinta negra profunda Soft-Touch + barniz selectivo de alto relieve con logo en oro.",
     "color": "#d4af37",
     "relPath": "01-frascos-gourmet-clasica/diseno-07-01-frascos-gourmet-clasica.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 7
   },
   {
@@ -815,6 +855,8 @@
     "specDetail": "Vidrio semi-pesado base 55x55mm, hombros marcados tipo licor premium o mezcal artesanal.",
     "color": "#d4af37",
     "relPath": "01-frascos-gourmet-clasica/diseno-08-01-frascos-gourmet-clasica.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 8
   },
   {
@@ -827,6 +869,8 @@
     "specDetail": "Papel Fedrigoni Savile Row 100% algodón, foliado mecánico con tipografía de prensa histórica.",
     "color": "#d4af37",
     "relPath": "01-frascos-gourmet-clasica/diseno-09-01-frascos-gourmet-clasica.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 9
   },
   {
@@ -839,6 +883,8 @@
     "specDetail": "Cartón kraft rígido forrado en papel percalina negro mate, serigrafiado en foil oro caliente.",
     "color": "#d4af37",
     "relPath": "01-frascos-gourmet-clasica/diseno-10-01-frascos-gourmet-clasica.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 10
   },
   {
@@ -851,6 +897,8 @@
     "specDetail": "Foil metálico hot-stamping cobre cálido Kurz 385 sobre cartoncillo negro tintado en masa.",
     "color": "#e11d48",
     "relPath": "02-frascos-gourmet-rubi/diseno-01-02-frascos-gourmet-rubi.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 1
   },
   {
@@ -863,6 +911,8 @@
     "specDetail": "Ilustración xilográfica fineliner vectorizada con stamping en cobre envejecido.",
     "color": "#e11d48",
     "relPath": "02-frascos-gourmet-rubi/diseno-02-02-frascos-gourmet-rubi.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 2
   },
   {
@@ -875,6 +925,8 @@
     "specDetail": "Matriz de prensado con relieve geométrico romboidal que maximiza la refracción del aceite rubí.",
     "color": "#e11d48",
     "relPath": "02-frascos-gourmet-rubi/diseno-03-02-frascos-gourmet-rubi.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 3
   },
   {
@@ -887,6 +939,8 @@
     "specDetail": "Troquelado en ángulo de 30° con solape de barniz cobre metalizado entre ambas áreas.",
     "color": "#e11d48",
     "relPath": "02-frascos-gourmet-rubi/diseno-04-02-frascos-gourmet-rubi.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 4
   },
   {
@@ -899,6 +953,8 @@
     "specDetail": "Cera de lacre flexible formulada para descorche limpio con cuño en bajorrelieve del arco maya.",
     "color": "#e11d48",
     "relPath": "02-frascos-gourmet-rubi/diseno-05-02-frascos-gourmet-rubi.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 5
   },
   {
@@ -911,6 +967,8 @@
     "specDetail": "Film BOPP ultra-clear con adhesivo permanente transparente apto para inmersión en aceite.",
     "color": "#e11d48",
     "relPath": "02-frascos-gourmet-rubi/diseno-06-02-frascos-gourmet-rubi.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 6
   },
   {
@@ -923,6 +981,8 @@
     "specDetail": "Banda perimetral superior e inferior con patrones arquitectónicos Puuc en hot-foil oro rosa.",
     "color": "#e11d48",
     "relPath": "02-frascos-gourmet-rubi/diseno-07-02-frascos-gourmet-rubi.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 7
   },
   {
@@ -935,6 +995,8 @@
     "specDetail": "Pipeta dosificadora de vidrio borosilicato y tetina de caucho negro mate para cocina molecular.",
     "color": "#e11d48",
     "relPath": "02-frascos-gourmet-rubi/diseno-08-02-frascos-gourmet-rubi.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 8
   },
   {
@@ -947,6 +1009,8 @@
     "specDetail": "Medalla circular de zamak acabado bronce antiguo atada con cinta de ante negro.",
     "color": "#e11d48",
     "relPath": "02-frascos-gourmet-rubi/diseno-09-02-frascos-gourmet-rubi.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 9
   },
   {
@@ -959,6 +1023,8 @@
     "specDetail": "Chapa de corcho micro-aglomerado de 0.4mm laminada sobre papel kraft autoadhesivo.",
     "color": "#e11d48",
     "relPath": "02-frascos-gourmet-rubi/diseno-10-02-frascos-gourmet-rubi.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 10
   },
   {
@@ -971,6 +1037,8 @@
     "specDetail": "Estructura laminada tri-capa PET/ALU/PE de alta barrera con boquilla termosellada a 45°.",
     "color": "#38bdf8",
     "relPath": "03-pouches-squeeze-50g/diseno-01-03-pouches-squeeze-50g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 1
   },
   {
@@ -983,6 +1051,8 @@
     "specDetail": "Barniz táctil satinado con zonas de brillo focalizado en pétalos y tipografía cobriza.",
     "color": "#38bdf8",
     "relPath": "03-pouches-squeeze-50g/diseno-02-03-pouches-squeeze-50g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 2
   },
   {
@@ -995,6 +1065,8 @@
     "specDetail": "Film exterior BOPP Soft-Touch mate con sensación sedosa anti-huellas y agarre seguro.",
     "color": "#38bdf8",
     "relPath": "03-pouches-squeeze-50g/diseno-03-03-pouches-squeeze-50g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 3
   },
   {
@@ -1007,6 +1079,8 @@
     "specDetail": "Franja desmetalizada por láser de 6mm que revela el nivel de aceite y suspensión de chiles.",
     "color": "#38bdf8",
     "relPath": "03-pouches-squeeze-50g/diseno-04-03-pouches-squeeze-50g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 4
   },
   {
@@ -1019,6 +1093,8 @@
     "specDetail": "Válvula de corte en estrella de silicona de grado alimentario que previene goteos en mesa.",
     "color": "#38bdf8",
     "relPath": "03-pouches-squeeze-50g/diseno-05-03-pouches-squeeze-50g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 5
   },
   {
@@ -1031,6 +1107,8 @@
     "specDetail": "Troquel circular reforzado de 8mm en la cabecera superior para colgar en arneses y asadores.",
     "color": "#38bdf8",
     "relPath": "03-pouches-squeeze-50g/diseno-06-03-pouches-squeeze-50g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 6
   },
   {
@@ -1043,6 +1121,8 @@
     "specDetail": "Laminado blanco mate opaco de alto impacto con estampación en seco de tipografía dorada.",
     "color": "#38bdf8",
     "relPath": "03-pouches-squeeze-50g/diseno-07-03-pouches-squeeze-50g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 7
   },
   {
@@ -1055,6 +1135,8 @@
     "specDetail": "Efecto cepillado metalizado con tintas translúcidas que dejan ver el brillo metálico del aluminio.",
     "color": "#38bdf8",
     "relPath": "03-pouches-squeeze-50g/diseno-08-03-pouches-squeeze-50g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 8
   },
   {
@@ -1067,6 +1149,8 @@
     "specDetail": "Cánula alargada de polietileno de 1.8mm de diámetro interno para decoración culinaria fina.",
     "color": "#38bdf8",
     "relPath": "03-pouches-squeeze-50g/diseno-09-03-pouches-squeeze-50g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 9
   },
   {
@@ -1079,6 +1163,8 @@
     "specDetail": "Tapón con estrías verticales profundas de agarre ergonómico y precinto de inviolabilidad.",
     "color": "#38bdf8",
     "relPath": "03-pouches-squeeze-50g/diseno-10-03-pouches-squeeze-50g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 10
   },
   {
@@ -1091,6 +1177,8 @@
     "specDetail": "Laminado mate color carbón vegetal 80% y degradado a naranja cempasúchil en base.",
     "color": "#ea580c",
     "relPath": "04-pasta-brava-70g/diseno-01-04-pasta-brava-70g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 1
   },
   {
@@ -1103,6 +1191,8 @@
     "specDetail": "Aluminio 99.7% puro deformable con barniz interno epóxico-fenólico libre de BPA.",
     "color": "#ea580c",
     "relPath": "04-pasta-brava-70g/diseno-02-04-pasta-brava-70g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 2
   },
   {
@@ -1115,6 +1205,8 @@
     "specDetail": "Tipografía manual inspirada en las taquerías de Mérida con ribetes en color crema y fuego.",
     "color": "#ea580c",
     "relPath": "04-pasta-brava-70g/diseno-03-04-pasta-brava-70g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 3
   },
   {
@@ -1127,6 +1219,8 @@
     "specDetail": "Papel kraft virgen de 60g exterior con barrera interna de film polietileno EVOH.",
     "color": "#ea580c",
     "relPath": "04-pasta-brava-70g/diseno-04-04-pasta-brava-70g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 4
   },
   {
@@ -1139,6 +1233,8 @@
     "specDetail": "Termómetro térmico impreso en tinta termocrómica que reacciona con la temperatura ambiente.",
     "color": "#ea580c",
     "relPath": "04-pasta-brava-70g/diseno-05-04-pasta-brava-70g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 5
   },
   {
@@ -1151,6 +1247,8 @@
     "specDetail": "Presentación institucional en bolsa flexible económica de boca ancha para canal HoReCa.",
     "color": "#ea580c",
     "relPath": "04-pasta-brava-70g/diseno-06-04-pasta-brava-70g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 6
   },
   {
@@ -1163,6 +1261,8 @@
     "specDetail": "Cintas diagonales de riesgo biológico gastronómico advirtiendo picor puro sin diluir.",
     "color": "#ea580c",
     "relPath": "04-pasta-brava-70g/diseno-07-04-pasta-brava-70g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 7
   },
   {
@@ -1175,6 +1275,8 @@
     "specDetail": "Geometría en cuña con costuras termoselladas ensanchadas para expulsión completa.",
     "color": "#ea580c",
     "relPath": "04-pasta-brava-70g/diseno-08-04-pasta-brava-70g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 8
   },
   {
@@ -1187,6 +1289,8 @@
     "specDetail": "Sello de denominación de origen peninsular con glifos de tierra fértil y sol caribeño.",
     "color": "#ea580c",
     "relPath": "04-pasta-brava-70g/diseno-09-04-pasta-brava-70g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 9
   },
   {
@@ -1199,6 +1303,8 @@
     "specDetail": "Bisagra elástica con sonido 'click' de cierre audible y apertura con el pulgar.",
     "color": "#ea580c",
     "relPath": "04-pasta-brava-70g/diseno-10-04-pasta-brava-70g.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 10
   },
   {
@@ -1211,6 +1317,8 @@
     "specDetail": "Foil mate termosellado en 4 lados (quad-seal) de 60x100mm con micro-muesca de rasgado.",
     "color": "#10b981",
     "relPath": "05-pocket-sachets-10pesos/diseno-01-05-pocket-sachets-10pesos.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 1
   },
   {
@@ -1223,6 +1331,8 @@
     "specDetail": "Tira de polipropileno negro con 10 ganchos troquelados para impulso en retail / OXXO.",
     "color": "#10b981",
     "relPath": "05-pocket-sachets-10pesos/diseno-02-05-pocket-sachets-10pesos.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 2
   },
   {
@@ -1235,6 +1345,8 @@
     "specDetail": "Cartoncillo plegadizo sulfatado 18pts con solapa frontal tipo marquesina publicitaria.",
     "color": "#10b981",
     "relPath": "05-pocket-sachets-10pesos/diseno-03-05-pocket-sachets-10pesos.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 3
   },
   {
@@ -1247,6 +1359,8 @@
     "specDetail": "Microperforación central por troquel láser que permite separar ambos sabores sin tijeras.",
     "color": "#10b981",
     "relPath": "05-pocket-sachets-10pesos/diseno-04-05-pocket-sachets-10pesos.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 4
   },
   {
@@ -1259,6 +1373,8 @@
     "specDetail": "Presentación stick-pack de 25x120mm que cabe perfectamente dentro de la bolsa del pantalón.",
     "color": "#10b981",
     "relPath": "05-pocket-sachets-10pesos/diseno-05-05-pocket-sachets-10pesos.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 5
   },
   {
@@ -1271,6 +1387,8 @@
     "specDetail": "Envase tetraédrico auto-estable que decora la mesa de bares y restaurantes gourmet.",
     "color": "#10b981",
     "relPath": "05-pocket-sachets-10pesos/diseno-06-05-pocket-sachets-10pesos.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 6
   },
   {
@@ -1283,6 +1401,8 @@
     "specDetail": "Film biopolímero NatureFlex a base de pulpa de madera certificada compostable en 90 días.",
     "color": "#10b981",
     "relPath": "05-pocket-sachets-10pesos/diseno-07-05-pocket-sachets-10pesos.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 7
   },
   {
@@ -1295,6 +1415,8 @@
     "specDetail": "Gráfica pop mexicana con tipografía de lucha libre y colores vivos para retail de paso.",
     "color": "#10b981",
     "relPath": "05-pocket-sachets-10pesos/diseno-08-05-pocket-sachets-10pesos.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 8
   },
   {
@@ -1307,6 +1429,8 @@
     "specDetail": "Línea de rasgado con corte direccional que forma un canal cónico estrecho al abrir.",
     "color": "#10b981",
     "relPath": "05-pocket-sachets-10pesos/diseno-09-05-pocket-sachets-10pesos.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 9
   },
   {
@@ -1319,6 +1443,8 @@
     "specDetail": "Pack de conveniencia 4 en 1 con colgador euro-hole para tiendas de abarrotes y autoservicio.",
     "color": "#10b981",
     "relPath": "05-pocket-sachets-10pesos/diseno-10-05-pocket-sachets-10pesos.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 10
   },
   {
@@ -1331,6 +1457,8 @@
     "specDetail": "Trazado geométrico áureo integrando el arco falso maya de Puuc con el cono del habanero.",
     "color": "#f59e0b",
     "relPath": "06-logotipos-e-identidad/diseno-01-06-logotipos-e-identidad.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 1
   },
   {
@@ -1343,6 +1471,8 @@
     "specDetail": "Tipografía monumental tallada con remates triangulares inspirados en la estela de Sayil.",
     "color": "#f59e0b",
     "relPath": "06-logotipos-e-identidad/diseno-02-06-logotipos-e-identidad.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 2
   },
   {
@@ -1355,6 +1485,8 @@
     "specDetail": "Renderizado hiperrealista de lacrado de autenticidad con rebordes irregulares fundidos.",
     "color": "#f59e0b",
     "relPath": "06-logotipos-e-identidad/diseno-03-06-logotipos-e-identidad.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 3
   },
   {
@@ -1367,6 +1499,8 @@
     "specDetail": "Composición cuatripartita inspirada en códices mayas de la península de Yucatán.",
     "color": "#f59e0b",
     "relPath": "06-logotipos-e-identidad/diseno-04-06-logotipos-e-identidad.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 4
   },
   {
@@ -1379,6 +1513,8 @@
     "specDetail": "Visualización macroscópica de relieve golpe seco con foil metálico micro-grabado.",
     "color": "#f59e0b",
     "relPath": "06-logotipos-e-identidad/diseno-05-06-logotipos-e-identidad.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 5
   },
   {
@@ -1391,6 +1527,8 @@
     "specDetail": "Líneas de 1.5pt con relleno pleno optimizadas para grabado en cajas de cartón y sellos.",
     "color": "#f59e0b",
     "relPath": "06-logotipos-e-identidad/diseno-06-06-logotipos-e-identidad.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 6
   },
   {
@@ -1403,6 +1541,8 @@
     "specDetail": "Emblema a la izquierda alineado ópticamente con la tipografía serif expandida a 120%.",
     "color": "#f59e0b",
     "relPath": "06-logotipos-e-identidad/diseno-07-06-logotipos-e-identidad.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 7
   },
   {
@@ -1415,6 +1555,8 @@
     "specDetail": "Marco circular con 24 dientes inspirados en el calendario sagrado Tzolkin.",
     "color": "#f59e0b",
     "relPath": "06-logotipos-e-identidad/diseno-08-06-logotipos-e-identidad.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 8
   },
   {
@@ -1427,6 +1569,8 @@
     "specDetail": "Tonalidad cobriza metalizada Pantone 876C con degradado a sombra obsidiana.",
     "color": "#f59e0b",
     "relPath": "06-logotipos-e-identidad/diseno-09-06-logotipos-e-identidad.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 9
   },
   {
@@ -1439,7 +1583,79 @@
     "specDetail": "Símbolo simplificado sin textos periféricos que mantiene legibilidad a 16x16 píxeles.",
     "color": "#f59e0b",
     "relPath": "06-logotipos-e-identidad/diseno-10-06-logotipos-e-identidad.jpg",
+    "posterPath": "",
+    "isVideo": false,
     "idx": 10
+  },
+  {
+    "id": "video-spot-01-clasica",
+    "folder": "01-frascos-gourmet-clasica",
+    "categoryName": "Spots Comerciales en Comida",
+    "title": "Spot 01: Taco Gourmet de Rib-Eye en Maíz Azul",
+    "subtitle": "Cuchara dorada vertiendo hilo ámbar de aceite de oliva y habanero inflado sobre costra de queso fundido.",
+    "badge": "SPOT TACO RIB-EYE",
+    "specDetail": "Video MP4 H.264 720x720 24fps con movimiento cinemático Ken Burns, música y cintillos publicitarios para Tabú Clásica 130g.",
+    "color": "#d4af37",
+    "relPath": "01-frascos-gourmet-clasica/video/spot-comercial-taco-ribeye.mp4",
+    "posterPath": "01-frascos-gourmet-clasica/video/poster.jpg",
+    "isVideo": true,
+    "idx": 1
+  },
+  {
+    "id": "video-spot-02-rubi",
+    "folder": "02-frascos-gourmet-rubi",
+    "categoryName": "Spots Comerciales en Comida",
+    "title": "Spot 02: Quesadilla de Queso Oaxaca & Camarones al Grill",
+    "subtitle": "Torrente carmesí de flor de jamaica tostada bañando quesillo estirado y mariscos al ajillo con destellos rubí.",
+    "badge": "SPOT QUESADILLA",
+    "specDetail": "Video MP4 H.264 720x720 24fps con movimiento cinemático Ken Burns, música y cintillos de campaña para Tabú Rubí 130g.",
+    "color": "#e11d48",
+    "relPath": "02-frascos-gourmet-rubi/video/spot-comercial-quesadilla-rubi.mp4",
+    "posterPath": "02-frascos-gourmet-rubi/video/poster.jpg",
+    "isVideo": true,
+    "idx": 2
+  },
+  {
+    "id": "video-spot-03-pouch",
+    "folder": "03-pouches-squeeze-50g",
+    "categoryName": "Spots Comerciales en Comida",
+    "title": "Spot 03: Torta Mexicana de Milanesa con Aguacate",
+    "subtitle": "Presión ergonómica en zigzag desde la boquilla en esquina sobre milanesa, frijoles y aguacate en telera crujiente.",
+    "badge": "SPOT TORTA POUCH",
+    "specDetail": "Video MP4 H.264 720x720 24fps con movimiento cinemático Ken Burns para formato On-The-Go 50g.",
+    "color": "#38bdf8",
+    "relPath": "03-pouches-squeeze-50g/video/spot-comercial-torta-mexicana.mp4",
+    "posterPath": "03-pouches-squeeze-50g/video/poster.jpg",
+    "isVideo": true,
+    "idx": 3
+  },
+  {
+    "id": "video-spot-04-pastabrava",
+    "folder": "04-pasta-brava-70g",
+    "categoryName": "Spots Comerciales en Comida",
+    "title": "Spot 04: Tacos al Pastor Dorados con Piña Asada",
+    "subtitle": "Porción viva y densa de pura pasta de habanero y ajo criollo 10/10 sobre trompo de pastor recién rebanado.",
+    "badge": "SPOT PASTOR 10/10",
+    "specDetail": "Video MP4 H.264 720x720 24fps con movimiento cinemático Ken Burns y alerta de picor 10/10 para Pasta Brava 70g.",
+    "color": "#ea580c",
+    "relPath": "04-pasta-brava-70g/video/spot-comercial-pastor-pastabrava.mp4",
+    "posterPath": "04-pasta-brava-70g/video/poster.jpg",
+    "isVideo": true,
+    "idx": 4
+  },
+  {
+    "id": "video-spot-05-street-sachet",
+    "folder": "05-pocket-sachets-10pesos",
+    "categoryName": "Spots Comerciales en Comida",
+    "title": "Spot 05: Tacos de Suadero en Taquería Callejera CDMX",
+    "subtitle": "Abre-fácil instantáneo en barra taquera salvando tu comida por sólo $10 pesos para tienditas y OXXO.",
+    "badge": "SPOT POCKET $10",
+    "specDetail": "Video MP4 H.264 720x720 24fps con movimiento cinemático Ken Burns para formato Pocket Monodosis 15g.",
+    "color": "#10b981",
+    "relPath": "05-pocket-sachets-10pesos/video/spot-comercial-tacos-callejeros.mp4",
+    "posterPath": "05-pocket-sachets-10pesos/video/poster.jpg",
+    "isVideo": true,
+    "idx": 5
   }
 ];
 
@@ -1450,7 +1666,7 @@
     // Modal elements
     const modalBackdrop = document.getElementById('modalBackdrop');
     const modalClose = document.getElementById('modalClose');
-    const modalImg = document.getElementById('modalImg');
+    const modalMediaContainer = document.getElementById('modalMediaContainer');
     const modalCatTag = document.getElementById('modalCatTag');
     const modalTitle = document.getElementById('modalTitle');
     const modalDesc = document.getElementById('modalDesc');
@@ -1463,7 +1679,15 @@
     function renderCards() {
       grid.innerHTML = '';
       const filtered = CARDS.filter(c => {
-        const matchesFilter = (currentFilter === 'all') || (c.folder === currentFilter);
+        let matchesFilter = false;
+        if (currentFilter === 'all') {
+          matchesFilter = true;
+        } else if (currentFilter === 'video-spots') {
+          matchesFilter = c.isVideo === true;
+        } else {
+          matchesFilter = (c.folder === currentFilter) && (!c.isVideo);
+        }
+
         const q = searchQuery.toLowerCase().trim();
         const matchesSearch = !q || 
           c.title.toLowerCase().includes(q) || 
@@ -1478,8 +1702,8 @@
         grid.innerHTML = `
           <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--text-muted);">
             <div style="font-size: 2.5rem; margin-bottom: 12px;">🔍</div>
-            <h3 style="color: #fff; margin-bottom: 8px;">No se encontraron diseños</h3>
-            <p>Intenta con otros términos como 'oro', 'lacre', 'vacio', 'aluminio', 'kraft' o 'sachet'.</p>
+            <h3 style="color: #fff; margin-bottom: 8px;">No se encontraron resultados</h3>
+            <p>Intenta con otros términos como 'taco', 'video', 'oro', 'lacre', 'vacio', 'aluminio', 'kraft' o 'sachet'.</p>
           </div>
         `;
         return;
@@ -1490,18 +1714,28 @@
         cardEl.className = 'card';
         cardEl.onclick = () => openModal(c);
 
+        let mediaHtml = '';
+        if (c.isVideo) {
+          mediaHtml = `<video class="card-media" src="${c.relPath}" poster="${c.posterPath}" autoplay loop muted playsinline></video>`;
+        } else {
+          mediaHtml = `<img class="card-media" src="${c.relPath}" alt="${c.title}" loading="lazy">`;
+        }
+
+        const badgeClass = c.isVideo ? 'card-badge video-badge' : 'card-badge';
+        const badgeText = c.isVideo ? '▶ SPOT MP4' : `Diseño #${c.idx}`;
+
         cardEl.innerHTML = `
           <div class="card-img-wrap">
-            <img class="card-img" src="${c.relPath}" alt="${c.title}" loading="lazy">
+            ${mediaHtml}
             <span class="card-cat-pill">${c.badge}</span>
-            <span class="card-badge">Diseño #${c.idx}</span>
+            <span class="${badgeClass}">${badgeText}</span>
           </div>
           <div class="card-body">
             <h3 class="card-title">${c.title}</h3>
             <p class="card-subtitle">${c.subtitle}</p>
             <div class="card-footer">
               <span>${c.categoryName.split(' ')[0]}</span>
-              <span class="card-finish">Ver Ficha Técnica →</span>
+              <span class="card-finish">${c.isVideo ? 'Ver Spot Publicitario ▶' : 'Ver Ficha Técnica →'}</span>
             </div>
           </div>
         `;
@@ -1510,7 +1744,16 @@
     }
 
     function openModal(card) {
-      modalImg.src = card.relPath;
+      if (card.isVideo) {
+        modalMediaContainer.innerHTML = `
+          <video class="modal-media" src="${card.relPath}" poster="${card.posterPath}" controls autoplay loop playsinline></video>
+        `;
+      } else {
+        modalMediaContainer.innerHTML = `
+          <img class="modal-media" src="${card.relPath}" alt="${card.title}">
+        `;
+      }
+
       modalCatTag.textContent = card.categoryName;
       modalCatTag.style.color = card.color;
       modalTitle.textContent = card.title;
@@ -1522,6 +1765,8 @@
     }
 
     function closeModal() {
+      const videoInModal = modalMediaContainer.querySelector('video');
+      if (videoInModal) videoInModal.pause();
       modalBackdrop.classList.remove('open');
       document.body.style.overflow = 'auto';
     }
