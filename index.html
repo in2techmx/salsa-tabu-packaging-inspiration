@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salsa Tabú — Catálogo de Inspiración de Packaging (60 Diseños)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #07090e;
+      --bg-card: #0f131c;
+      --bg-card-hover: #151a27;
+      --gold: #d4af37;
+      --gold-light: #f3e5ab;
+      --gold-dark: #8c6d1f;
+      --bronze: #cd7f32;
+      --ruby: #e11d48;
+      --habanero: #ea580c;
+      --emerald: #10b981;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-soft: rgba(212, 175, 55, 0.15);
+      --border-bright: rgba(212, 175, 55, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Subtle luxury mesh gradient */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -20%;
+      left: -10%;
+      width: 140vw;
+      height: 140vh;
+      background: radial-gradient(circle at 20% 15%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+                  radial-gradient(circle at 80% 30%, rgba(225, 29, 72, 0.04) 0%, transparent 40%),
+                  radial-gradient(circle at 50% 80%, rgba(234, 88, 12, 0.03) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header, main, footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Banner */
+    .framework-badge {
+      background: rgba(16, 185, 129, 0.1);
+      border-bottom: 1px solid rgba(16, 185, 129, 0.25);
+      color: #34d399;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid var(--border-soft);
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      background: linear-gradient(135deg, #ffffff 30%, var(--gold-light) 70%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      max-width: 800px;
+      margin: 0 auto 32px;
+      font-size: 1.05rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold) 0%, #b8922c 100%);
+      color: #07090e;
+      box-shadow: 0 4px 18px rgba(212, 175, 55, 0.3);
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(212, 175, 55, 0.45);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main);
+    }
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    /* Metrics Strip */
+    .metrics-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 30px 0 50px;
+      padding: 24px;
+      background: rgba(15, 19, 28, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+    }
+
+    .metric-item {
+      text-align: center;
+    }
+    .metric-value {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .metric-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 4px;
+    }
+
+    /* Filter Controls */
+    .controls-wrapper {
+      position: sticky;
+      top: 16px;
+      z-index: 50;
+      background: rgba(7, 9, 14, 0.88);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (min-width: 900px) {
+      .controls-wrapper {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: thin;
+    }
+
+    .tab-btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .tab-btn.active {
+      background: var(--gold);
+      color: #07090e;
+      border-color: var(--gold);
+      box-shadow: 0 2px 12px rgba(212, 175, 55, 0.3);
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 260px;
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 9px 14px 9px 36px;
+      color: var(--text-main);
+      font-size: 0.85rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--gold);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      pointer-events: none;
+    }
+
+    /* Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      background: var(--bg-card-hover);
+      border-color: var(--border-bright);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 24px rgba(212, 175, 55, 0.12);
+    }
+
+    .card-img-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 100%; /* 1:1 Aspect */
+      background: #090b10;
+      overflow: hidden;
+    }
+
+    .card-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover .card-img {
+      transform: scale(1.04);
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(15, 19, 28, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(52, 211, 153, 0.4);
+      color: #34d399;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    .card-cat-pill {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(15, 19, 28, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-soft);
+      color: var(--gold);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .card-subtitle {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: #64748b;
+    }
+
+    .card-finish {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* Lightbox Modal */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(14px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-bright);
+      border-radius: 16px;
+      max-width: 950px;
+      width: 100%;
+      max-height: 90vh;
+      display: grid;
+      grid-template-columns: 1fr;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(212, 175, 55, 0.2);
+      animation: modalIn 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    @media (min-width: 800px) {
+      .modal-box {
+        grid-template-columns: 1.1fr 1fr;
+      }
+    }
+
+    @keyframes modalIn {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-img-wrap {
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .modal-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-height: 550px;
+    }
+
+    .modal-details {
+      padding: 36px 30px;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.2s ease;
+      z-index: 10;
+    }
+
+    .modal-close:hover {
+      background: var(--ruby);
+      border-color: var(--ruby);
+    }
+
+    .modal-tag {
+      display: inline-block;
+      align-self: flex-start;
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .modal-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.45rem;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .modal-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .modal-spec-block {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+
+    .modal-spec-title {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .modal-spec-text {
+      font-size: 0.85rem;
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
+    .modal-actions {
+      margin-top: auto;
+      display: flex;
+      gap: 12px;
+    }
+
+    /* Footer */
+    footer {
+      background: #040508;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 50px 0 30px;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .footer-col h4 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold-light);
+      font-size: 1rem;
+      margin-bottom: 14px;
+    }
+
+    .footer-col p, .footer-col a {
+      color: var(--text-muted);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .footer-col a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="framework-badge">
+    Framework IN2TECHMX Activado • Director de Desarrollo (DD) • Catálogo Oficial de Packaging y Diseño
+  </div>
+
+  <header class="container">
+    <div class="hero">
+      <div class="hero-eyebrow">
+        <span>🏺</span> Colección de Inspiración de Empaques 2026
+      </div>
+      <h1>Salsa Tabú — Packaging Inspiration</h1>
+      <p>
+        Repositorio de 60 conceptos visuales y especificaciones técnicas de empaque organizados en 6 carpetas temáticas para la línea gourmet, formatos portátiles On-The-Go, sachet de conveniencia OXXO ($10 MXN) y sistema de identidad peninsular.
+      </p>
+      <div class="hero-actions">
+        <a href="https://in2techmx.github.io/salsa-tabu-gourmet/" target="_blank" class="btn btn-gold">
+          🛒 Ir a Tienda E-Commerce En Vivo
+        </a>
+        <a href="https://github.com/in2techmx/salsa-tabu-packaging-inspiration" target="_blank" class="btn btn-outline">
+          📦 Ver Repositorio en GitHub
+        </a>
+      </div>
+    </div>
+
+    <!-- Metrics -->
+    <div class="metrics-strip">
+      <div class="metric-item">
+        <div class="metric-value">60</div>
+        <div class="metric-label">Diseños de Inspiración</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-value">6</div>
+        <div class="metric-label">Carpetas Especializadas</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-value">10 x Cat</div>
+        <div class="metric-label">Muestras por Presentación</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-value">0% Sal</div>
+        <div class="metric-label">Libre de Sodio Gourmet</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-value">3 Gates</div>
+        <div class="metric-label">IN2TECHMX Auditado</div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls-wrapper">
+      <div class="tabs" id="tabs">
+        <button class="tab-btn active" data-filter="all">Todos (60)</button>
+        <button class="tab-btn" data-filter="01-frascos-gourmet-clasica">Clásica 130g (10)</button>
+        <button class="tab-btn" data-filter="02-frascos-gourmet-rubi">Rubí Jamaica (10)</button>
+        <button class="tab-btn" data-filter="03-pouches-squeeze-50g">Pouches 50g (10)</button>
+        <button class="tab-btn" data-filter="04-pasta-brava-70g">Pasta Brava 70g (10)</button>
+        <button class="tab-btn" data-filter="05-pocket-sachets-10pesos">Pocket $10 MXN (10)</button>
+        <button class="tab-btn" data-filter="06-logotipos-e-identidad">Logotipos & Marca (10)</button>
+      </div>
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Buscar por acabado, material, tipo...">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Cards rendered via JavaScript -->
+    </div>
+  </main>
+
+  <!-- Modal Lightbox -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-img-wrap">
+        <img src="" alt="" class="modal-img" id="modalImg">
+      </div>
+      <div class="modal-details">
+        <span class="modal-tag" id="modalCatTag">Categoría</span>
+        <h2 class="modal-title" id="modalTitle">Título del Diseño</h2>
+        <p class="modal-desc" id="modalDesc">Descripción detallada</p>
+        <div class="modal-spec-block">
+          <div class="modal-spec-title">Ficha Técnica de Fabricación & Material</div>
+          <div class="modal-spec-text" id="modalSpec">Detalles técnicos del acabado y sustrato.</div>
+        </div>
+        <div class="modal-actions">
+          <a href="#" target="_blank" class="btn btn-outline" id="modalRawBtn">Descargar Arte HD</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Salsa Tabú Gourmet</h4>
+          <p>La experiencia culinaria de habanero gourmet libre de sodio. Proceso artesanal de deshidratación extrema y envasado al vacío con infusión en aceite de oliva extra virgen.</p>
+          <p>📍 CDMX & Península de Yucatán, México</p>
+        </div>
+        <div class="footer-col">
+          <h4>Carpetas del Repositorio</h4>
+          <a href="01-frascos-gourmet-clasica/">📁 01 - Frascos Gourmet Clásica (130g)</a>
+          <a href="02-frascos-gourmet-rubi/">📁 02 - Frascos Gourmet Rubí Jamaica (130g)</a>
+          <a href="03-pouches-squeeze-50g/">📁 03 - Pouches Squeeze Portátiles (50g)</a>
+          <a href="04-pasta-brava-70g/">📁 04 - Pasta Brava Habanero & Ajo (70g)</a>
+          <a href="05-pocket-sachets-10pesos/">📁 05 - Pocket Sachets $10 MXN (15g)</a>
+          <a href="06-logotipos-e-identidad/">📁 06 - Logotipos e Identidad Visual</a>
+        </div>
+        <div class="footer-col">
+          <h4>Gobernanza & Auditoría</h4>
+          <p>• Framework IN2TECHMX v2.0</p>
+          <p>• Cero Cajas Negras | Rigor Técnico Absoluto</p>
+          <p>• Gate 1: Pruebas Automatizadas Verificadas</p>
+          <p>• Gate 2: Seguridad OWASP & Ausencia de Secretos</p>
+          <p>• Gate 3: Fidelidad Narrativa & Trazabilidad</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Salsa Tabú México. Desarrollado bajo la gobernanza del ecosistema IN2TECHMX.</div>
+        <div>Director de Desarrollo (DD) • Repositorio Oficial de Packaging</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const CARDS = [
+  {
+    "id": "01-frascos-gourmet-clasica-01",
+    "folder": "01-frascos-gourmet-clasica",
+    "categoryName": "Frascos Gourmet Clásica (130g)",
+    "title": "Diseño 01: Clásica Oro Mate Cilíndrico",
+    "subtitle": "Frasco de vidrio pesado con fondo grueso, etiqueta negra mate y hot-stamping oro.",
+    "badge": "CRISTAL ~130G",
+    "specDetail": "Vidrio flint pesado 130g, tapa metálica twist-off negra mate con compuesto plastisol para pasteurización a baño maría.",
+    "color": "#d4af37",
+    "relPath": "01-frascos-gourmet-clasica/diseno-01-01-frascos-gourmet-clasica.jpg",
+    "idx": 1
+  },
+  {
+    "id": "01-frascos-gourmet-clasica-02",
+    "folder": "01-frascos-gourmet-clasica",
+    "categoryName": "Frascos Gourmet Clásica (130g)",
+    "title": "Diseño 02: Hexagonal Botica de Autor",
+    "subtitle": "Cuerpo prismático hexagonal con sello al vacío de baño maría y lacre oro.",
+    "badge": "EDICIÓN BOTICA",
+    "specDetail": "Formato facetado 6 caras de 130ml, tapa rosca de aluminio anodizado oro y sello termocogible de garantía.",
+    "color": "#d4af37",
+    "relPath": "01-frascos-gourmet-clasica/diseno-02-01-frascos-gourmet-clasica.jpg",
+    "idx": 2
+  },
+  {
+    "id": "01-frascos-gourmet-clasica-03",
+    "folder": "01-frascos-gourmet-clasica",
+    "categoryName": "Frascos Gourmet Clásica (130g)",
+    "title": "Diseño 03: Etiqueta Envolvente 360° con Ventana",
+    "subtitle": "Permite apreciar la suspensión de hojuelas de habanero deshidratado en aceite.",
+    "badge": "VENTANA 360°",
+    "specDetail": "Sustrato polipropileno mate con ventana transparente calibrada a 40mm para visibilidad de sedimentos gourmet.",
+    "color": "#d4af37",
+    "relPath": "01-frascos-gourmet-clasica/diseno-03-01-frascos-gourmet-clasica.jpg",
+    "idx": 3
+  },
+  {
+    "id": "01-frascos-gourmet-clasica-04",
+    "folder": "01-frascos-gourmet-clasica",
+    "categoryName": "Frascos Gourmet Clásica (130g)",
+    "title": "Diseño 04: Minimalismo Nórdico y Cristal Extraclaro",
+    "subtitle": "Tipografía serif ultra fina en oro claro sobre vidrio ultra transparente.",
+    "badge": "MINIMALISMO",
+    "specDetail": "Vidrio óptico extra-flint tipo perfumería francesa, impresión directa UV curable oro pálido.",
+    "color": "#d4af37",
+    "relPath": "01-frascos-gourmet-clasica/diseno-04-01-frascos-gourmet-clasica.jpg",
+    "idx": 4
+  },
+  {
+    "id": "01-frascos-gourmet-clasica-05",
+    "folder": "01-frascos-gourmet-clasica",
+    "categoryName": "Frascos Gourmet Clásica (130g)",
+    "title": "Diseño 05: Serigrafía Vitrificada Directa",
+    "subtitle": "Sin etiqueta de papel; impresión directa en oro al fuego horneada sobre el cristal.",
+    "badge": "SERIGRAFÍA DIRECTA",
+    "specDetail": "Horneado a 580°C con tintas cerámicas de metales preciosos (oro 18k líquido vitrificado).",
+    "color": "#d4af37",
+    "relPath": "01-frascos-gourmet-clasica/diseno-05-01-frascos-gourmet-clasica.jpg",
+    "idx": 5
+  },
+  {
+    "id": "01-frascos-gourmet-clasica-06",
+    "folder": "01-frascos-gourmet-clasica",
+    "categoryName": "Frascos Gourmet Clásica (130g)",
+    "title": "Diseño 06: Cintillo Vertical Térmico de Garantía",
+    "subtitle": "Faja de seguridad vertical que cruza la tapa garantizando el vacío por 2 años.",
+    "badge": "SELLO TÉRMICO",
+    "specDetail": "Cinta de papel kraft autoadhesivo de seguridad destructible al primer giro de la tapa.",
+    "color": "#d4af37",
+    "relPath": "01-frascos-gourmet-clasica/diseno-06-01-frascos-gourmet-clasica.jpg",
+    "idx": 6
+  },
+  {
+    "id": "01-frascos-gourmet-clasica-07",
+    "folder": "01-frascos-gourmet-clasica",
+    "categoryName": "Frascos Gourmet Clásica (130g)",
+    "title": "Diseño 07: Lujo Monocromático Black-on-Black",
+    "subtitle": "Barniz UV brillante a registro sobre negro mate profundo con acentos dorados.",
+    "badge": "BLACK-ON-BLACK",
+    "specDetail": "Doble pasada de tinta negra profunda Soft-Touch + barniz selectivo de alto relieve con logo en oro.",
+    "color": "#d4af37",
+    "relPath": "01-frascos-gourmet-clasica/diseno-07-01-frascos-gourmet-clasica.jpg",
+    "idx": 7
+  },
+  {
+    "id": "01-frascos-gourmet-clasica-08",
+    "folder": "01-frascos-gourmet-clasica",
+    "categoryName": "Frascos Gourmet Clásica (130g)",
+    "title": "Diseño 08: Prisma Cuadrado Licorera Francesa",
+    "subtitle": "Diseño de perfil bajo con hombros anchos y peso sustancial en mano.",
+    "badge": "PRISMA CUADRADO",
+    "specDetail": "Vidrio semi-pesado base 55x55mm, hombros marcados tipo licor premium o mezcal artesanal.",
+    "color": "#d4af37",
+    "relPath": "01-frascos-gourmet-clasica/diseno-08-01-frascos-gourmet-clasica.jpg",
+    "idx": 8
+  },
+  {
+    "id": "01-frascos-gourmet-clasica-09",
+    "folder": "01-frascos-gourmet-clasica",
+    "categoryName": "Frascos Gourmet Clásica (130g)",
+    "title": "Diseño 09: Papel Algodón Artesanal Numerado",
+    "subtitle": "Etiqueta en papel algodón con barbas rasgadas a mano y lote foliado #XX/50.",
+    "badge": "LOTE FOLIADO",
+    "specDetail": "Papel Fedrigoni Savile Row 100% algodón, foliado mecánico con tipografía de prensa histórica.",
+    "color": "#d4af37",
+    "relPath": "01-frascos-gourmet-clasica/diseno-09-01-frascos-gourmet-clasica.jpg",
+    "idx": 9
+  },
+  {
+    "id": "01-frascos-gourmet-clasica-10",
+    "folder": "01-frascos-gourmet-clasica",
+    "categoryName": "Frascos Gourmet Clásica (130g)",
+    "title": "Diseño 10: Estuche Rígido de Regalo",
+    "subtitle": "Tubo protector negro mate con interiores aterciopelados y tapa de hojalata dorada.",
+    "badge": "ESTUCHE DE LUJO",
+    "specDetail": "Cartón kraft rígido forrado en papel percalina negro mate, serigrafiado en foil oro caliente.",
+    "color": "#d4af37",
+    "relPath": "01-frascos-gourmet-clasica/diseno-10-01-frascos-gourmet-clasica.jpg",
+    "idx": 10
+  },
+  {
+    "id": "02-frascos-gourmet-rubi-01",
+    "folder": "02-frascos-gourmet-rubi",
+    "categoryName": "Frascos Gourmet Rubí (130g)",
+    "title": "Diseño 01: Rubí Bronce Mágnum Clásico",
+    "subtitle": "Etiqueta negra mate con foil cobre y refracción carmesí de flor de jamaica.",
+    "badge": "INFUSIÓN RUBÍ",
+    "specDetail": "Foil metálico hot-stamping cobre cálido Kurz 385 sobre cartoncillo negro tintado en masa.",
+    "color": "#e11d48",
+    "relPath": "02-frascos-gourmet-rubi/diseno-01-02-frascos-gourmet-rubi.jpg",
+    "idx": 1
+  },
+  {
+    "id": "02-frascos-gourmet-rubi-02",
+    "folder": "02-frascos-gourmet-rubi",
+    "categoryName": "Frascos Gourmet Rubí (130g)",
+    "title": "Diseño 02: Ilustración Botánica de Jamaica",
+    "subtitle": "Grabado calcográfico tradicional de flor de jamaica criolla y chiles habaneros.",
+    "badge": "GRABADO BOTÁNICO",
+    "specDetail": "Ilustración xilográfica fineliner vectorizada con stamping en cobre envejecido.",
+    "color": "#e11d48",
+    "relPath": "02-frascos-gourmet-rubi/diseno-02-02-frascos-gourmet-rubi.jpg",
+    "idx": 2
+  },
+  {
+    "id": "02-frascos-gourmet-rubi-03",
+    "folder": "02-frascos-gourmet-rubi",
+    "categoryName": "Frascos Gourmet Rubí (130g)",
+    "title": "Diseño 03: Vidrio Tallado con Facetas Diamante",
+    "subtitle": "Frasco labrado que proyecta prismas rojizos sobre manteles y mesas gourmet.",
+    "badge": "VIDRIO TALLADO",
+    "specDetail": "Matriz de prensado con relieve geométrico romboidal que maximiza la refracción del aceite rubí.",
+    "color": "#e11d48",
+    "relPath": "02-frascos-gourmet-rubi/diseno-03-02-frascos-gourmet-rubi.jpg",
+    "idx": 3
+  },
+  {
+    "id": "02-frascos-gourmet-rubi-04",
+    "folder": "02-frascos-gourmet-rubi",
+    "categoryName": "Frascos Gourmet Rubí (130g)",
+    "title": "Diseño 04: Etiqueta Bicolor Obsidiana y Carmesí",
+    "subtitle": "Corte diagonal sobrio que une la profundidad de la noche con el fuego del habanero.",
+    "badge": "CORTE BICOLOR",
+    "specDetail": "Troquelado en ángulo de 30° con solape de barniz cobre metalizado entre ambas áreas.",
+    "color": "#e11d48",
+    "relPath": "02-frascos-gourmet-rubi/diseno-04-02-frascos-gourmet-rubi.jpg",
+    "idx": 4
+  },
+  {
+    "id": "02-frascos-gourmet-rubi-05",
+    "folder": "02-frascos-gourmet-rubi",
+    "categoryName": "Frascos Gourmet Rubí (130g)",
+    "title": "Diseño 05: Sello de Lacre Carmesí Tradicional",
+    "subtitle": "Corona de cera sellada al calor con el glifo de Yucatán para maridaje de autor.",
+    "badge": "LACRE CARMESÍ",
+    "specDetail": "Cera de lacre flexible formulada para descorche limpio con cuño en bajorrelieve del arco maya.",
+    "color": "#e11d48",
+    "relPath": "02-frascos-gourmet-rubi/diseno-05-02-frascos-gourmet-rubi.jpg",
+    "idx": 5
+  },
+  {
+    "id": "02-frascos-gourmet-rubi-06",
+    "folder": "02-frascos-gourmet-rubi",
+    "categoryName": "Frascos Gourmet Rubí (130g)",
+    "title": "Diseño 06: Transparencia Absoluta No-Label Look",
+    "subtitle": "Etiqueta invisible en film cristalino donde el protagonista es el tono rubí puro.",
+    "badge": "NO-LABEL LOOK",
+    "specDetail": "Film BOPP ultra-clear con adhesivo permanente transparente apto para inmersión en aceite.",
+    "color": "#e11d48",
+    "relPath": "02-frascos-gourmet-rubi/diseno-06-02-frascos-gourmet-rubi.jpg",
+    "idx": 6
+  },
+  {
+    "id": "02-frascos-gourmet-rubi-07",
+    "folder": "02-frascos-gourmet-rubi",
+    "categoryName": "Frascos Gourmet Rubí (130g)",
+    "title": "Diseño 07: Greca Maya Perimetral en Oro Rosa",
+    "subtitle": "Guarda decorativa inspirada en el Cuadrángulo de las Monjas de Uxmal.",
+    "badge": "GRECA MAYA",
+    "specDetail": "Banda perimetral superior e inferior con patrones arquitectónicos Puuc en hot-foil oro rosa.",
+    "color": "#e11d48",
+    "relPath": "02-frascos-gourmet-rubi/diseno-07-02-frascos-gourmet-rubi.jpg",
+    "idx": 7
+  },
+  {
+    "id": "02-frascos-gourmet-rubi-08",
+    "folder": "02-frascos-gourmet-rubi",
+    "categoryName": "Frascos Gourmet Rubí (130g)",
+    "title": "Diseño 08: Frasco Gotero Sommelier",
+    "subtitle": "Gotero de precisión en cristal para aplicar gotas exactas en ceviches y cortes.",
+    "badge": "EDICIÓN SOMMELIER",
+    "specDetail": "Pipeta dosificadora de vidrio borosilicato y tetina de caucho negro mate para cocina molecular.",
+    "color": "#e11d48",
+    "relPath": "02-frascos-gourmet-rubi/diseno-08-02-frascos-gourmet-rubi.jpg",
+    "idx": 8
+  },
+  {
+    "id": "02-frascos-gourmet-rubi-09",
+    "folder": "02-frascos-gourmet-rubi",
+    "categoryName": "Frascos Gourmet Rubí (130g)",
+    "title": "Diseño 09: Gargantilla de Gamuza y Medalla de Bronce",
+    "subtitle": "Cordel de cuero con dije repujado al cuello de la botella para mesas de gala.",
+    "badge": "MEDALLA METÁLICA",
+    "specDetail": "Medalla circular de zamak acabado bronce antiguo atada con cinta de ante negro.",
+    "color": "#e11d48",
+    "relPath": "02-frascos-gourmet-rubi/diseno-09-02-frascos-gourmet-rubi.jpg",
+    "idx": 9
+  },
+  {
+    "id": "02-frascos-gourmet-rubi-10",
+    "folder": "02-frascos-gourmet-rubi",
+    "categoryName": "Frascos Gourmet Rubí (130g)",
+    "title": "Diseño 10: Lámina de Corcho y Tipografía Vino",
+    "subtitle": "Sustrato de corcho natural ultra fino con estampado en foil cobrizo brillante.",
+    "badge": "CORCHO NATURAL",
+    "specDetail": "Chapa de corcho micro-aglomerado de 0.4mm laminada sobre papel kraft autoadhesivo.",
+    "color": "#e11d48",
+    "relPath": "02-frascos-gourmet-rubi/diseno-10-02-frascos-gourmet-rubi.jpg",
+    "idx": 10
+  },
+  {
+    "id": "03-pouches-squeeze-50g-01",
+    "folder": "03-pouches-squeeze-50g",
+    "categoryName": "Pouches Squeeze Portátiles (50g)",
+    "title": "Diseño 01: Pouch Clásica con Boquilla Angular",
+    "subtitle": "Doypack flexible ergonómico con taparosca en esquina y logo maya en oro.",
+    "badge": "POUCH 50G",
+    "specDetail": "Estructura laminada tri-capa PET/ALU/PE de alta barrera con boquilla termosellada a 45°.",
+    "color": "#38bdf8",
+    "relPath": "03-pouches-squeeze-50g/diseno-01-03-pouches-squeeze-50g.jpg",
+    "idx": 1
+  },
+  {
+    "id": "03-pouches-squeeze-50g-02",
+    "folder": "03-pouches-squeeze-50g",
+    "categoryName": "Pouches Squeeze Portátiles (50g)",
+    "title": "Diseño 02: Pouch Rubí con Filigrana Floral",
+    "subtitle": "Sobre flexible con detalles de flor de jamaica en barniz brillante sobre mate.",
+    "badge": "JAMAICA ON-THE-GO",
+    "specDetail": "Barniz táctil satinado con zonas de brillo focalizado en pétalos y tipografía cobriza.",
+    "color": "#38bdf8",
+    "relPath": "03-pouches-squeeze-50g/diseno-02-03-pouches-squeeze-50g.jpg",
+    "idx": 2
+  },
+  {
+    "id": "03-pouches-squeeze-50g-03",
+    "folder": "03-pouches-squeeze-50g",
+    "categoryName": "Pouches Squeeze Portátiles (50g)",
+    "title": "Diseño 03: Textura Soft-Touch Tacto Goma",
+    "subtitle": "Acabado aterciopelado antideslizante para manipulación en parrilladas y viajes.",
+    "badge": "TACTO GOMA",
+    "specDetail": "Film exterior BOPP Soft-Touch mate con sensación sedosa anti-huellas y agarre seguro.",
+    "color": "#38bdf8",
+    "relPath": "03-pouches-squeeze-50g/diseno-03-03-pouches-squeeze-50g.jpg",
+    "idx": 3
+  },
+  {
+    "id": "03-pouches-squeeze-50g-04",
+    "folder": "03-pouches-squeeze-50g",
+    "categoryName": "Pouches Squeeze Portátiles (50g)",
+    "title": "Diseño 04: Ventana Vertical Traslúcida",
+    "subtitle": "Permite verificar el contenido restante de salsa con medición milimétrica.",
+    "badge": "VENTANA NIVEL",
+    "specDetail": "Franja desmetalizada por láser de 6mm que revela el nivel de aceite y suspensión de chiles.",
+    "color": "#38bdf8",
+    "relPath": "03-pouches-squeeze-50g/diseno-04-03-pouches-squeeze-50g.jpg",
+    "idx": 4
+  },
+  {
+    "id": "03-pouches-squeeze-50g-05",
+    "folder": "03-pouches-squeeze-50g",
+    "categoryName": "Pouches Squeeze Portátiles (50g)",
+    "title": "Diseño 05: Boquilla con Válvula Antigoteo",
+    "subtitle": "Membrana de silicona que corta el flujo al soltar la presión sin manchar.",
+    "badge": "VÁLVULA SILICÓN",
+    "specDetail": "Válvula de corte en estrella de silicona de grado alimentario que previene goteos en mesa.",
+    "color": "#38bdf8",
+    "relPath": "03-pouches-squeeze-50g/diseno-05-03-pouches-squeeze-50g.jpg",
+    "idx": 5
+  },
+  {
+    "id": "03-pouches-squeeze-50g-06",
+    "folder": "03-pouches-squeeze-50g",
+    "categoryName": "Pouches Squeeze Portátiles (50g)",
+    "title": "Diseño 06: Formato Outdoor con Mosquetón",
+    "subtitle": "Ojillo reforzado superior para enganchar en mochilas o mandiles de cocina.",
+    "badge": "EDICIÓN OUTDOOR",
+    "specDetail": "Troquel circular reforzado de 8mm en la cabecera superior para colgar en arneses y asadores.",
+    "color": "#38bdf8",
+    "relPath": "03-pouches-squeeze-50g/diseno-06-03-pouches-squeeze-50g.jpg",
+    "idx": 6
+  },
+  {
+    "id": "03-pouches-squeeze-50g-07",
+    "folder": "03-pouches-squeeze-50g",
+    "categoryName": "Pouches Squeeze Portátiles (50g)",
+    "title": "Diseño 07: Blanco Mate Contemporáneo",
+    "subtitle": "Edición minimalista en blanco tiza con el glifo de habanero en oro metálico.",
+    "badge": "BLANCO MINIMAL",
+    "specDetail": "Laminado blanco mate opaco de alto impacto con estampación en seco de tipografía dorada.",
+    "color": "#38bdf8",
+    "relPath": "03-pouches-squeeze-50g/diseno-07-03-pouches-squeeze-50g.jpg",
+    "idx": 7
+  },
+  {
+    "id": "03-pouches-squeeze-50g-08",
+    "folder": "03-pouches-squeeze-50g",
+    "categoryName": "Pouches Squeeze Portátiles (50g)",
+    "title": "Diseño 08: Aluminio Cepillado Industrial",
+    "subtitle": "Foil metálico brillante con sensación aeroespacial de alta resistencia.",
+    "badge": "ALUMINIO CEPILLADO",
+    "specDetail": "Efecto cepillado metalizado con tintas translúcidas que dejan ver el brillo metálico del aluminio.",
+    "color": "#38bdf8",
+    "relPath": "03-pouches-squeeze-50g/diseno-08-03-pouches-squeeze-50g.jpg",
+    "idx": 8
+  },
+  {
+    "id": "03-pouches-squeeze-50g-09",
+    "folder": "03-pouches-squeeze-50g",
+    "categoryName": "Pouches Squeeze Portátiles (50g)",
+    "title": "Diseño 09: Boquilla Dosificadora de Aguja",
+    "subtitle": "Diseñada para trazado gastronómico de líneas y puntos en emplatados de autor.",
+    "badge": "PUNTA DE AGUJA",
+    "specDetail": "Cánula alargada de polietileno de 1.8mm de diámetro interno para decoración culinaria fina.",
+    "color": "#38bdf8",
+    "relPath": "03-pouches-squeeze-50g/diseno-09-03-pouches-squeeze-50g.jpg",
+    "idx": 9
+  },
+  {
+    "id": "03-pouches-squeeze-50g-10",
+    "folder": "03-pouches-squeeze-50g",
+    "categoryName": "Pouches Squeeze Portátiles (50g)",
+    "title": "Diseño 10: Tapa Estriada de Fácil Agarre",
+    "subtitle": "Diseño sobredimensionado que permite abrir y cerrar con las manos aceitosas.",
+    "badge": "TAPA ESTRIADA",
+    "specDetail": "Tapón con estrías verticales profundas de agarre ergonómico y precinto de inviolabilidad.",
+    "color": "#38bdf8",
+    "relPath": "03-pouches-squeeze-50g/diseno-10-03-pouches-squeeze-50g.jpg",
+    "idx": 10
+  },
+  {
+    "id": "04-pasta-brava-70g-01",
+    "folder": "04-pasta-brava-70g",
+    "categoryName": "Pasta Brava Habanero & Ajo (70g)",
+    "title": "Diseño 01: Charcoal y Naranja Habanero Fuego",
+    "subtitle": "Contraste vibrante con el logo oficial maya sobre cuerpo naranja fuego 70g.",
+    "badge": "PASTA BRAVA 70G",
+    "specDetail": "Laminado mate color carbón vegetal 80% y degradado a naranja cempasúchil en base.",
+    "color": "#ea580c",
+    "relPath": "04-pasta-brava-70g/diseno-01-04-pasta-brava-70g.jpg",
+    "idx": 1
+  },
+  {
+    "id": "04-pasta-brava-70g-02",
+    "folder": "04-pasta-brava-70g",
+    "categoryName": "Pasta Brava Habanero & Ajo (70g)",
+    "title": "Diseño 02: Tubo Colapsible de Aluminio",
+    "subtitle": "Tubo metálico tipo ungüento culinario que protege la pulpa viva de habanero.",
+    "badge": "TUBO ALUMINIO",
+    "specDetail": "Aluminio 99.7% puro deformable con barniz interno epóxico-fenólico libre de BPA.",
+    "color": "#ea580c",
+    "relPath": "04-pasta-brava-70g/diseno-02-04-pasta-brava-70g.jpg",
+    "idx": 2
+  },
+  {
+    "id": "04-pasta-brava-70g-03",
+    "folder": "04-pasta-brava-70g",
+    "categoryName": "Pasta Brava Habanero & Ajo (70g)",
+    "title": "Diseño 03: Tipografía de Rótulo Popular Mexicano",
+    "subtitle": "Gráfica popular inspirada en rotulismo de mercados tradicionales de Yucatán.",
+    "badge": "RÓTULO MEXICANO",
+    "specDetail": "Tipografía manual inspirada en las taquerías de Mérida con ribetes en color crema y fuego.",
+    "color": "#ea580c",
+    "relPath": "04-pasta-brava-70g/diseno-03-04-pasta-brava-70g.jpg",
+    "idx": 3
+  },
+  {
+    "id": "04-pasta-brava-70g-04",
+    "folder": "04-pasta-brava-70g",
+    "categoryName": "Pasta Brava Habanero & Ajo (70g)",
+    "title": "Diseño 04: Papel Kraft Rústico Laminado",
+    "subtitle": "Apariencia de saco de especias con sellado aséptico interior hermético.",
+    "badge": "KRAFT RÚSTICO",
+    "specDetail": "Papel kraft virgen de 60g exterior con barrera interna de film polietileno EVOH.",
+    "color": "#ea580c",
+    "relPath": "04-pasta-brava-70g/diseno-04-04-pasta-brava-70g.jpg",
+    "idx": 4
+  },
+  {
+    "id": "04-pasta-brava-70g-05",
+    "folder": "04-pasta-brava-70g",
+    "categoryName": "Pasta Brava Habanero & Ajo (70g)",
+    "title": "Diseño 05: Escala Scoville Frontal Termómetro",
+    "subtitle": "Iconografía directa que marca picor máximo 10/10 para conocedores del fuego.",
+    "badge": "SCOVILLE 10/10",
+    "specDetail": "Termómetro térmico impreso en tinta termocrómica que reacciona con la temperatura ambiente.",
+    "color": "#ea580c",
+    "relPath": "04-pasta-brava-70g/diseno-05-04-pasta-brava-70g.jpg",
+    "idx": 5
+  },
+  {
+    "id": "04-pasta-brava-70g-06",
+    "folder": "04-pasta-brava-70g",
+    "categoryName": "Pasta Brava Habanero & Ajo (70g)",
+    "title": "Diseño 06: Pouch Eco-Pack de Rellenado Fondas",
+    "subtitle": "Sobre de bajo costo con pico vertedor para recargar frascos de restaurantes.",
+    "badge": "ECO RELLENABLE",
+    "specDetail": "Presentación institucional en bolsa flexible económica de boca ancha para canal HoReCa.",
+    "color": "#ea580c",
+    "relPath": "04-pasta-brava-70g/diseno-06-04-pasta-brava-70g.jpg",
+    "idx": 6
+  },
+  {
+    "id": "04-pasta-brava-70g-07",
+    "folder": "04-pasta-brava-70g",
+    "categoryName": "Pasta Brava Habanero & Ajo (70g)",
+    "title": "Diseño 07: Franjas de Precaución Negra y Amarilla",
+    "subtitle": "Alerta gráfica de fuego auténtico para amantes del picor sin pretensiones.",
+    "badge": "PRECAUCIÓN PICOR",
+    "specDetail": "Cintas diagonales de riesgo biológico gastronómico advirtiendo picor puro sin diluir.",
+    "color": "#ea580c",
+    "relPath": "04-pasta-brava-70g/diseno-07-04-pasta-brava-70g.jpg",
+    "idx": 7
+  },
+  {
+    "id": "04-pasta-brava-70g-08",
+    "folder": "04-pasta-brava-70g",
+    "categoryName": "Pasta Brava Habanero & Ajo (70g)",
+    "title": "Diseño 08: Tubo Cónico Invertido Squeeze",
+    "subtitle": "Diseño anatómico para vaciado total al 100% sin dejar residuos en el fondo.",
+    "badge": "TUBO CÓNICO",
+    "specDetail": "Geometría en cuña con costuras termoselladas ensanchadas para expulsión completa.",
+    "color": "#ea580c",
+    "relPath": "04-pasta-brava-70g/diseno-08-04-pasta-brava-70g.jpg",
+    "idx": 8
+  },
+  {
+    "id": "04-pasta-brava-70g-09",
+    "folder": "04-pasta-brava-70g",
+    "categoryName": "Pasta Brava Habanero & Ajo (70g)",
+    "title": "Diseño 09: Escudo Peninsular de Yucatán",
+    "subtitle": "Emblema territorial que celebra el habanero criollo certificado con ajo morado.",
+    "badge": "ORIGEN YUCATÁN",
+    "specDetail": "Sello de denominación de origen peninsular con glifos de tierra fértil y sol caribeño.",
+    "color": "#ea580c",
+    "relPath": "04-pasta-brava-70g/diseno-09-04-pasta-brava-70g.jpg",
+    "idx": 9
+  },
+  {
+    "id": "04-pasta-brava-70g-10",
+    "folder": "04-pasta-brava-70g",
+    "categoryName": "Pasta Brava Habanero & Ajo (70g)",
+    "title": "Diseño 10: Tapa Flip-Top de Una Sola Mano",
+    "subtitle": "Permite aplicar salsa sin soltar el taco, pozole o birria en ningún momento.",
+    "badge": "FLIP-TOP RÁPIDO",
+    "specDetail": "Bisagra elástica con sonido 'click' de cierre audible y apertura con el pulgar.",
+    "color": "#ea580c",
+    "relPath": "04-pasta-brava-70g/diseno-10-04-pasta-brava-70g.jpg",
+    "idx": 10
+  },
+  {
+    "id": "05-pocket-sachets-10pesos-01",
+    "folder": "05-pocket-sachets-10pesos",
+    "categoryName": "Pocket Sachets $10 MXN (15g)",
+    "title": "Diseño 01: Sachet Monodosis Negro y Oro 15g",
+    "subtitle": "Sobre individual de bolsillo con abre-fácil y leyenda visible de $10 pesos.",
+    "badge": "MONODOSIS $10",
+    "specDetail": "Foil mate termosellado en 4 lados (quad-seal) de 60x100mm con micro-muesca de rasgado.",
+    "color": "#10b981",
+    "relPath": "05-pocket-sachets-10pesos/diseno-01-05-pocket-sachets-10pesos.jpg",
+    "idx": 1
+  },
+  {
+    "id": "05-pocket-sachets-10pesos-02",
+    "folder": "05-pocket-sachets-10pesos",
+    "categoryName": "Pocket Sachets $10 MXN (15g)",
+    "title": "Diseño 02: Tira Exhibidora de Mostrador Strip",
+    "subtitle": "Tira vertical troquelada para colgar 10 unidades en mostradores de caja.",
+    "badge": "TIRA MOSTRADOR",
+    "specDetail": "Tira de polipropileno negro con 10 ganchos troquelados para impulso en retail / OXXO.",
+    "color": "#10b981",
+    "relPath": "05-pocket-sachets-10pesos/diseno-02-05-pocket-sachets-10pesos.jpg",
+    "idx": 2
+  },
+  {
+    "id": "05-pocket-sachets-10pesos-03",
+    "folder": "05-pocket-sachets-10pesos",
+    "categoryName": "Pocket Sachets $10 MXN (15g)",
+    "title": "Diseño 03: Cajilla Automontable Counter Box",
+    "subtitle": "Display compacto de 24 sobres para colocar junto a la caja registradora.",
+    "badge": "DISPLAY CAJA",
+    "specDetail": "Cartoncillo plegadizo sulfatado 18pts con solapa frontal tipo marquesina publicitaria.",
+    "color": "#10b981",
+    "relPath": "05-pocket-sachets-10pesos/diseno-03-05-pocket-sachets-10pesos.jpg",
+    "idx": 3
+  },
+  {
+    "id": "05-pocket-sachets-10pesos-04",
+    "folder": "05-pocket-sachets-10pesos",
+    "categoryName": "Pocket Sachets $10 MXN (15g)",
+    "title": "Diseño 04: Sachet Duo-Pack Articulado",
+    "subtitle": "Dos sobres unidos por línea punteada para probar Clásica y Rubí por $20.",
+    "badge": "DUO-PACK $20",
+    "specDetail": "Microperforación central por troquel láser que permite separar ambos sabores sin tijeras.",
+    "color": "#10b981",
+    "relPath": "05-pocket-sachets-10pesos/diseno-04-05-pocket-sachets-10pesos.jpg",
+    "idx": 4
+  },
+  {
+    "id": "05-pocket-sachets-10pesos-05",
+    "folder": "05-pocket-sachets-10pesos",
+    "categoryName": "Pocket Sachets $10 MXN (15g)",
+    "title": "Diseño 05: Sachet Tubular Stick 15g",
+    "subtitle": "Formato alargado y angosto para exprimir cómodamente dentro de tortas y caldos.",
+    "badge": "FORMATO STICK",
+    "specDetail": "Presentación stick-pack de 25x120mm que cabe perfectamente dentro de la bolsa del pantalón.",
+    "color": "#10b981",
+    "relPath": "05-pocket-sachets-10pesos/diseno-05-05-pocket-sachets-10pesos.jpg",
+    "idx": 5
+  },
+  {
+    "id": "05-pocket-sachets-10pesos-06",
+    "folder": "05-pocket-sachets-10pesos",
+    "categoryName": "Pocket Sachets $10 MXN (15g)",
+    "title": "Diseño 06: Mini Tetraedro Piramidal 15g",
+    "subtitle": "Empaque geométrico triangular inspirado en las pirámides de Yucatán.",
+    "badge": "PIRÁMIDE MAYA",
+    "specDetail": "Envase tetraédrico auto-estable que decora la mesa de bares y restaurantes gourmet.",
+    "color": "#10b981",
+    "relPath": "05-pocket-sachets-10pesos/diseno-06-05-pocket-sachets-10pesos.jpg",
+    "idx": 6
+  },
+  {
+    "id": "05-pocket-sachets-10pesos-07",
+    "folder": "05-pocket-sachets-10pesos",
+    "categoryName": "Pocket Sachets $10 MXN (15g)",
+    "title": "Diseño 07: Sachet Compostable y Biodegradable",
+    "subtitle": "Foil sustentable con base de celulosa vegetal para consumo consciente.",
+    "badge": "COMPOSTABLE",
+    "specDetail": "Film biopolímero NatureFlex a base de pulpa de madera certificada compostable en 90 días.",
+    "color": "#10b981",
+    "relPath": "05-pocket-sachets-10pesos/diseno-07-05-pocket-sachets-10pesos.jpg",
+    "idx": 7
+  },
+  {
+    "id": "05-pocket-sachets-10pesos-08",
+    "folder": "05-pocket-sachets-10pesos",
+    "categoryName": "Pocket Sachets $10 MXN (15g)",
+    "title": "Diseño 08: Edición Salvavidas Taquero",
+    "subtitle": "Copy frontal humorístico y auténtico: 'Para salvar tu taco por 10 pesos'.",
+    "badge": "COMPRA IMPULSO",
+    "specDetail": "Gráfica pop mexicana con tipografía de lucha libre y colores vivos para retail de paso.",
+    "color": "#10b981",
+    "relPath": "05-pocket-sachets-10pesos/diseno-08-05-pocket-sachets-10pesos.jpg",
+    "idx": 8
+  },
+  {
+    "id": "05-pocket-sachets-10pesos-09",
+    "folder": "05-pocket-sachets-10pesos",
+    "categoryName": "Pocket Sachets $10 MXN (15g)",
+    "title": "Diseño 09: Boquilla con Canal Guiado Antiderrames",
+    "subtitle": "Corte en micro-embudo que dirige la salsa exactamente sobre el platillo.",
+    "badge": "CANAL PRECISO",
+    "specDetail": "Línea de rasgado con corte direccional que forma un canal cónico estrecho al abrir.",
+    "color": "#10b981",
+    "relPath": "05-pocket-sachets-10pesos/diseno-09-05-pocket-sachets-10pesos.jpg",
+    "idx": 9
+  },
+  {
+    "id": "05-pocket-sachets-10pesos-10",
+    "folder": "05-pocket-sachets-10pesos",
+    "categoryName": "Pocket Sachets $10 MXN (15g)",
+    "title": "Diseño 10: Blíster Cuarteto Desprendible 4x$10",
+    "subtitle": "Lámina de 4 sachets para abastecimiento semanal de comidas fuera de casa.",
+    "badge": "BLÍSTER 4x$10",
+    "specDetail": "Pack de conveniencia 4 en 1 con colgador euro-hole para tiendas de abarrotes y autoservicio.",
+    "color": "#10b981",
+    "relPath": "05-pocket-sachets-10pesos/diseno-10-05-pocket-sachets-10pesos.jpg",
+    "idx": 10
+  },
+  {
+    "id": "06-logotipos-e-identidad-01",
+    "folder": "06-logotipos-e-identidad",
+    "categoryName": "Logotipos y Sistema de Identidad",
+    "title": "Diseño 01: Emblema Oficial Arco Maya y Habanero",
+    "subtitle": "Símbolo canónico con arquitectura de Uxmal y silueta orgánica del habanero.",
+    "badge": "LOGOTIPO OFICIAL",
+    "specDetail": "Trazado geométrico áureo integrando el arco falso maya de Puuc con el cono del habanero.",
+    "color": "#f59e0b",
+    "relPath": "06-logotipos-e-identidad/diseno-01-06-logotipos-e-identidad.jpg",
+    "idx": 1
+  },
+  {
+    "id": "06-logotipos-e-identidad-02",
+    "folder": "06-logotipos-e-identidad",
+    "categoryName": "Logotipos y Sistema de Identidad",
+    "title": "Diseño 02: Monograma T Habanero Esculpido",
+    "subtitle": "Síntesis moderna donde la letra T abraza las curvas del chile habanero.",
+    "badge": "MONOGRAMA",
+    "specDetail": "Tipografía monumental tallada con remates triangulares inspirados en la estela de Sayil.",
+    "color": "#f59e0b",
+    "relPath": "06-logotipos-e-identidad/diseno-02-06-logotipos-e-identidad.jpg",
+    "idx": 2
+  },
+  {
+    "id": "06-logotipos-e-identidad-03",
+    "folder": "06-logotipos-e-identidad",
+    "categoryName": "Logotipos y Sistema de Identidad",
+    "title": "Diseño 03: Sello de Cera de Lacre en Relieve",
+    "subtitle": "Efecto tridimensional de medalla sellada a mano en cera dorada caliente.",
+    "badge": "SELLO LACRE 3D",
+    "specDetail": "Renderizado hiperrealista de lacrado de autenticidad con rebordes irregulares fundidos.",
+    "color": "#f59e0b",
+    "relPath": "06-logotipos-e-identidad/diseno-03-06-logotipos-e-identidad.jpg",
+    "idx": 3
+  },
+  {
+    "id": "06-logotipos-e-identidad-04",
+    "folder": "06-logotipos-e-identidad",
+    "categoryName": "Logotipos y Sistema de Identidad",
+    "title": "Diseño 04: Glifo Maya Prehispánico Estilizado",
+    "subtitle": "Trazos geométricos mayas representando el sol peninsular y el picor sagrado.",
+    "badge": "GLIFO PREHISPÁNICO",
+    "specDetail": "Composición cuatripartita inspirada en códices mayas de la península de Yucatán.",
+    "color": "#f59e0b",
+    "relPath": "06-logotipos-e-identidad/diseno-04-06-logotipos-e-identidad.jpg",
+    "idx": 4
+  },
+  {
+    "id": "06-logotipos-e-identidad-05",
+    "folder": "06-logotipos-e-identidad",
+    "categoryName": "Logotipos y Sistema de Identidad",
+    "title": "Diseño 05: Hot-Stamping Oro sobre Papel Algodón",
+    "subtitle": "Presentación editorial con textura de papel negro mate y foil de oro puro.",
+    "badge": "HOT-STAMPING",
+    "specDetail": "Visualización macroscópica de relieve golpe seco con foil metálico micro-grabado.",
+    "color": "#f59e0b",
+    "relPath": "06-logotipos-e-identidad/diseno-05-06-logotipos-e-identidad.jpg",
+    "idx": 5
+  },
+  {
+    "id": "06-logotipos-e-identidad-06",
+    "folder": "06-logotipos-e-identidad",
+    "categoryName": "Logotipos y Sistema de Identidad",
+    "title": "Diseño 06: Versión Lineal Tinta Negra Pura",
+    "subtitle": "Arte monocromático de alto contraste para sellos de hule y cajas corrugadas.",
+    "badge": "MONOCROMÁTICO",
+    "specDetail": "Líneas de 1.5pt con relleno pleno optimizadas para grabado en cajas de cartón y sellos.",
+    "color": "#f59e0b",
+    "relPath": "06-logotipos-e-identidad/diseno-06-06-logotipos-e-identidad.jpg",
+    "idx": 6
+  },
+  {
+    "id": "06-logotipos-e-identidad-07",
+    "folder": "06-logotipos-e-identidad",
+    "categoryName": "Logotipos y Sistema de Identidad",
+    "title": "Diseño 07: Logotipo Horizontal Extendido",
+    "subtitle": "Disposición apaisada para membretes, cintillos de empaque y menús de restaurante.",
+    "badge": "HORIZONTAL",
+    "specDetail": "Emblema a la izquierda alineado ópticamente con la tipografía serif expandida a 120%.",
+    "color": "#f59e0b",
+    "relPath": "06-logotipos-e-identidad/diseno-07-06-logotipos-e-identidad.jpg",
+    "idx": 7
+  },
+  {
+    "id": "06-logotipos-e-identidad-08",
+    "folder": "06-logotipos-e-identidad",
+    "categoryName": "Logotipos y Sistema de Identidad",
+    "title": "Diseño 08: Medallón Circular de Yucatán",
+    "subtitle": "Guarda circular con greca tradicional y lema 'Península de Yucatán'.",
+    "badge": "MEDALLÓN CIRCULAR",
+    "specDetail": "Marco circular con 24 dientes inspirados en el calendario sagrado Tzolkin.",
+    "color": "#f59e0b",
+    "relPath": "06-logotipos-e-identidad/diseno-08-06-logotipos-e-identidad.jpg",
+    "idx": 8
+  },
+  {
+    "id": "06-logotipos-e-identidad-09",
+    "folder": "06-logotipos-e-identidad",
+    "categoryName": "Logotipos y Sistema de Identidad",
+    "title": "Diseño 09: Acabado Cobre Patinado Mágnum",
+    "subtitle": "Variación cromática en tono bronce cálido para la línea Rubí y flor de jamaica.",
+    "badge": "COBRE MÁGNUM",
+    "specDetail": "Tonalidad cobriza metalizada Pantone 876C con degradado a sombra obsidiana.",
+    "color": "#f59e0b",
+    "relPath": "06-logotipos-e-identidad/diseno-09-06-logotipos-e-identidad.jpg",
+    "idx": 9
+  },
+  {
+    "id": "06-logotipos-e-identidad-10",
+    "folder": "06-logotipos-e-identidad",
+    "categoryName": "Logotipos y Sistema de Identidad",
+    "title": "Diseño 10: Ícono de Marca App y Favicon",
+    "subtitle": "Silueta limpia adaptada a pantallas retina, formatos cuadrados y redes sociales.",
+    "badge": "ÍCONO APP",
+    "specDetail": "Símbolo simplificado sin textos periféricos que mantiene legibilidad a 16x16 píxeles.",
+    "color": "#f59e0b",
+    "relPath": "06-logotipos-e-identidad/diseno-10-06-logotipos-e-identidad.jpg",
+    "idx": 10
+  }
+];
+
+    const grid = document.getElementById('galleryGrid');
+    const tabs = document.querySelectorAll('.tab-btn');
+    const searchInput = document.getElementById('searchInput');
+
+    // Modal elements
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const modalClose = document.getElementById('modalClose');
+    const modalImg = document.getElementById('modalImg');
+    const modalCatTag = document.getElementById('modalCatTag');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalSpec = document.getElementById('modalSpec');
+    const modalRawBtn = document.getElementById('modalRawBtn');
+
+    let currentFilter = 'all';
+    let searchQuery = '';
+
+    function renderCards() {
+      grid.innerHTML = '';
+      const filtered = CARDS.filter(c => {
+        const matchesFilter = (currentFilter === 'all') || (c.folder === currentFilter);
+        const q = searchQuery.toLowerCase().trim();
+        const matchesSearch = !q || 
+          c.title.toLowerCase().includes(q) || 
+          c.subtitle.toLowerCase().includes(q) || 
+          c.badge.toLowerCase().includes(q) || 
+          c.specDetail.toLowerCase().includes(q) ||
+          c.categoryName.toLowerCase().includes(q);
+        return matchesFilter && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--text-muted);">
+            <div style="font-size: 2.5rem; margin-bottom: 12px;">🔍</div>
+            <h3 style="color: #fff; margin-bottom: 8px;">No se encontraron diseños</h3>
+            <p>Intenta con otros términos como 'oro', 'lacre', 'vacio', 'aluminio', 'kraft' o 'sachet'.</p>
+          </div>
+        `;
+        return;
+      }
+
+      filtered.forEach(c => {
+        const cardEl = document.createElement('div');
+        cardEl.className = 'card';
+        cardEl.onclick = () => openModal(c);
+
+        cardEl.innerHTML = `
+          <div class="card-img-wrap">
+            <img class="card-img" src="${c.relPath}" alt="${c.title}" loading="lazy">
+            <span class="card-cat-pill">${c.badge}</span>
+            <span class="card-badge">Diseño #${c.idx}</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">${c.title}</h3>
+            <p class="card-subtitle">${c.subtitle}</p>
+            <div class="card-footer">
+              <span>${c.categoryName.split(' ')[0]}</span>
+              <span class="card-finish">Ver Ficha Técnica →</span>
+            </div>
+          </div>
+        `;
+        grid.appendChild(cardEl);
+      });
+    }
+
+    function openModal(card) {
+      modalImg.src = card.relPath;
+      modalCatTag.textContent = card.categoryName;
+      modalCatTag.style.color = card.color;
+      modalTitle.textContent = card.title;
+      modalDesc.textContent = card.subtitle;
+      modalSpec.textContent = card.specDetail;
+      modalRawBtn.href = card.relPath;
+      modalBackdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modalBackdrop.classList.remove('open');
+      document.body.style.overflow = 'auto';
+    }
+
+    modalClose.onclick = closeModal;
+    modalBackdrop.onclick = (e) => {
+      if (e.target === modalBackdrop) closeModal();
+    };
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // Tab buttons
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentFilter = tab.getAttribute('data-filter');
+        renderCards();
+      });
+    });
+
+    // Search input
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      renderCards();
+    });
+
+    // Initial render
+    renderCards();
+  </script>
+</body>
+</html>
